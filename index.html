@@ -83,6 +83,9 @@
     color:#9aa8a6;font-size:14px;text-align:center;padding:20px}
   .proof .shot-img{flex:1;min-width:260px;max-width:100%;border-radius:10px;
     border:1px solid var(--line);display:block;height:auto}
+  .proof .shot-video{flex:1;min-width:280px;aspect-ratio:16/9;border-radius:10px;
+    overflow:hidden;border:1px solid var(--line);background:#000}
+  .proof .shot-video iframe{width:100%;height:100%;border:0;display:block}
 
   /* Services grid */
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
@@ -170,10 +173,13 @@
         <p>This is the kind of system I build. The free version covers the basics; I customize it for businesses that want it built around their exact workflow.</p>
         <a href="MEDIUM_ARTICLE_URL" class="btn" style="font-size:15px;padding:11px 20px">Read how I built it →</a>
       </div>
-      <!-- Drop your file at images/quote-demo.gif (or .png). Until then this shows a placeholder box. -->
-      <img class="shot-img" src="images/quote-demo.gif" alt="Smart Quote Generator — demo of a quote being generated and emailed"
-           onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-      <div class="shot" style="display:none">[ Add images/quote-demo.gif to show the demo here ]</div>
+      <div class="shot-video">
+        <iframe src="https://www.youtube.com/embed/pbLiCOTb4T0"
+                title="Smart Quote Generator — demo"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+      </div>
     </div>
 
     <!-- ============================================================= -->
@@ -257,7 +263,7 @@
 
     <div class="form-embed">
       <!-- Replace the src with your Google Form embed URL (Form → Send → < > Embed) -->
-      <iframe src="GOOGLE_FORM_EMBED_URL" loading="lazy">Loading the form…</iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeuFxTpHV3oyBUmNOBbMM3q_ZPbLFr5R62dI1HKE2eNN0_vQA/viewform?embedded=true" loading="lazy">Loading the form…</iframe>
       <div class="form-fallback">
         Form not loading? Email me directly at <a href="mailto:dilipkashyap.sd@gmail.com">dilipkashyap.sd@gmail.com</a>.
       </div>
