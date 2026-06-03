@@ -100,11 +100,19 @@
   .why li{list-style:none;background:var(--soft);border-radius:12px;padding:18px 20px}
   .why b{color:var(--teal)}
 
-  /* Project cards (the growing grid of past builds) */
-  .project-card{display:block;color:inherit;transition:transform .12s,box-shadow .12s}
+  /* Project cards (the growing grid of past builds) — smaller, 3-4 per row */
+  .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+  .project-card{display:block;color:inherit;background:#fff;border:1px solid var(--line);
+    border-radius:var(--radius);padding:14px;transition:transform .12s,box-shadow .12s}
   .project-card:hover{text-decoration:none;transform:translateY(-2px);
     box-shadow:0 6px 20px rgba(15,118,110,.10)}
-  .project-card img{width:100%;height:auto;border-radius:8px;border:1px solid var(--line);margin-bottom:14px}
+  .project-card img{width:100%;height:120px;object-fit:cover;border-radius:8px;
+    border:1px solid var(--line);margin-bottom:10px;display:block}
+  .project-card .thumb{height:80px;border-radius:8px;display:flex;align-items:center;
+    justify-content:center;font-size:34px;margin-bottom:10px;color:#fff;
+    background:linear-gradient(135deg,#0F766E,#14B8A6)}
+  .project-card h3{font-size:15px;margin-bottom:6px}
+  .project-card p{font-size:13px;line-height:1.5}
 
   /* Steps */
   .steps{counter-reset:step;display:grid;gap:16px}
@@ -182,14 +190,33 @@
       </div>
     </div>
 
-    <!-- MORE BUILDS — newest/best project is featured above; everything else goes here as a card. -->
+    <!-- MORE BUILDS — newest/best project is featured above; everything else goes here as a small card. -->
+    <!-- Auto-fits 3-4 per row on desktop. To add a project: copy one <a class="project-card">…</a> block. -->
     <h3 style="margin-top:44px;margin-bottom:18px;font-size:20px">More things I've built</h3>
-    <div class="grid">
+    <div class="projects-grid">
 
-      <a class="card project-card" href="https://dilipkashyap15.medium.com/i-replaced-paid-proposal-software-with-one-google-apps-script-file-free-open-source-b0fd71939ab9">
-        <img src="https://img.youtube.com/vi/pbLiCOTb4T0/maxresdefault.jpg" alt="Smart Quote Generator demo">
+      <a class="project-card" href="https://dilipkashyap15.medium.com/i-replaced-paid-proposal-software-with-one-google-apps-script-file-free-open-source-b0fd71939ab9">
+        <div class="thumb">🧾</div>
         <h3>Smart Quote Generator</h3>
-        <p>Turns a Google Sheet into a complete quoting system — form, branded PDF, auto-email, open-tracking, follow-ups, mini-CRM. Free &amp; open source.</p>
+        <p>Google Sheet → branded PDF quote → emailed, tracked, followed-up. Free &amp; open source.</p>
+      </a>
+
+      <a class="project-card" href="https://medium.com/codetodeploy/how-i-automated-client-outreach-for-finance-accounting-businesses-without-expensive-crms-692cdee3e269">
+        <div class="thumb">✉️</div>
+        <h3>Client Outreach Automation</h3>
+        <p>Cold-email outreach for finance &amp; accounting firms, built on Google Workspace — no expensive CRM.</p>
+      </a>
+
+      <a class="project-card" href="https://levelup.gitconnected.com/i-built-an-ai-email-engine-in-google-sheets-it-doubled-our-reply-rate-a60e0cb887b2">
+        <div class="thumb">🤖</div>
+        <h3>AI Email Engine</h3>
+        <p>AI-powered cold-email engine inside a Google Sheet that doubled our reply rate.</p>
+      </a>
+
+      <a class="project-card" href="https://levelup.gitconnected.com/how-i-cut-a-4-hour-procurement-process-to-3-minutes-using-google-apps-script-07777d906dd1">
+        <div class="thumb">⚡</div>
+        <h3>Procurement Automation</h3>
+        <p>Cut a 4-hour procurement process to 3 minutes with one Google Apps Script.</p>
       </a>
 
     </div>
