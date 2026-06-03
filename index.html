@@ -100,19 +100,20 @@
   .why li{list-style:none;background:var(--soft);border-radius:12px;padding:18px 20px}
   .why b{color:var(--teal)}
 
-  /* Project cards (the growing grid of past builds) — smaller, 3-4 per row */
-  .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-  .project-card{display:block;color:inherit;background:#fff;border:1px solid var(--line);
-    border-radius:var(--radius);padding:14px;transition:transform .12s,box-shadow .12s}
+  /* Project cards — bigger, image-forward, 3 per row on desktop */
+  .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .project-card{display:flex;flex-direction:column;color:inherit;background:#fff;
+    border:1px solid var(--line);border-radius:var(--radius);padding:18px;
+    transition:transform .12s,box-shadow .12s}
   .project-card:hover{text-decoration:none;transform:translateY(-2px);
     box-shadow:0 6px 20px rgba(15,118,110,.10)}
-  .project-card img{width:100%;height:120px;object-fit:cover;border-radius:8px;
-    border:1px solid var(--line);margin-bottom:10px;display:block}
-  .project-card .thumb{height:80px;border-radius:8px;display:flex;align-items:center;
-    justify-content:center;font-size:34px;margin-bottom:10px;color:#fff;
+  .project-card img{width:100%;height:180px;object-fit:cover;border-radius:8px;
+    border:1px solid var(--line);margin-bottom:14px;display:block}
+  .project-card .thumb{height:140px;border-radius:8px;display:flex;align-items:center;
+    justify-content:center;font-size:44px;margin-bottom:14px;color:#fff;
     background:linear-gradient(135deg,#0F766E,#14B8A6)}
-  .project-card h3{font-size:15px;margin-bottom:6px}
-  .project-card p{font-size:13px;line-height:1.5}
+  .project-card h3{font-size:17px;margin-bottom:8px}
+  .project-card p{font-size:14px;line-height:1.55;margin-top:auto}
 
   /* Steps */
   .steps{counter-reset:step;display:grid;gap:16px}
@@ -195,26 +196,20 @@
     <h3 style="margin-top:44px;margin-bottom:18px;font-size:20px">More things I've built</h3>
     <div class="projects-grid">
 
-      <a class="project-card" href="https://dilipkashyap15.medium.com/i-replaced-paid-proposal-software-with-one-google-apps-script-file-free-open-source-b0fd71939ab9">
-        <div class="thumb">🧾</div>
-        <h3>Smart Quote Generator</h3>
-        <p>Google Sheet → branded PDF quote → emailed, tracked, followed-up. Free &amp; open source.</p>
-      </a>
-
       <a class="project-card" href="https://medium.com/codetodeploy/how-i-automated-client-outreach-for-finance-accounting-businesses-without-expensive-crms-692cdee3e269">
-        <div class="thumb">✉️</div>
+        <img src="images/finance_sme.webp" alt="Client outreach automation for finance &amp; accounting firms">
         <h3>Client Outreach Automation</h3>
         <p>Cold-email outreach for finance &amp; accounting firms, built on Google Workspace — no expensive CRM.</p>
       </a>
 
       <a class="project-card" href="https://levelup.gitconnected.com/i-built-an-ai-email-engine-in-google-sheets-it-doubled-our-reply-rate-a60e0cb887b2">
-        <div class="thumb">🤖</div>
+        <img src="images/ai_email.webp" alt="AI email engine inside a Google Sheet">
         <h3>AI Email Engine</h3>
         <p>AI-powered cold-email engine inside a Google Sheet that doubled our reply rate.</p>
       </a>
 
       <a class="project-card" href="https://levelup.gitconnected.com/how-i-cut-a-4-hour-procurement-process-to-3-minutes-using-google-apps-script-07777d906dd1">
-        <div class="thumb">⚡</div>
+        <img src="images/procurment.png" alt="Procurement automation in Google Apps Script">
         <h3>Procurement Automation</h3>
         <p>Cut a 4-hour procurement process to 3 minutes with one Google Apps Script.</p>
       </a>
