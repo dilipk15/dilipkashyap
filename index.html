@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dilip Kashyap — Custom Automation for Small Businesses</title>
-<meta name="description" content="I build custom scheduling, quote, invoicing, membership, and workflow automation for small businesses using Google Workspace and Apps Script. No monthly SaaS fees.">
+<meta name="description" content="I build custom payment, scheduling, quote, invoicing, and membership automation for small businesses using Google Workspace, Razorpay, and Apps Script. No monthly SaaS fees.">
 
 <!-- Open Graph (for nice link previews on LinkedIn / WhatsApp / etc.) -->
 <meta property="og:title" content="Dilip Kashyap — Custom Automation for Small Businesses">
-<meta property="og:description" content="Custom scheduling, quote, invoicing, membership, and workflow automation built on Google Workspace. No monthly SaaS fees.">
+<meta property="og:description" content="Custom payment, scheduling, quote, invoicing, and membership automation built on Google Workspace and Razorpay. No monthly SaaS fees.">
 <meta property="og:type" content="website">
 
 <style>
@@ -172,24 +172,17 @@
   <div class="wrap">
     <div class="eyebrow">Proof, not promises</div>
     <h2>Start with something I built and gave away free</h2>
-    <p class="section-intro">Smart Scheduler turns a Google Sheet into a free Calendly alternative — public booking page, auto Google Meet links, clean HTML confirmation emails, anti-double-book protection. Replaces Calendly, Acuity, Cal.com ($12–$20/user/month). Open source, three-minute install.</p>
+    <p class="section-intro">Google Forms doesn't accept payments. So I built a free Apps Script that adds Razorpay payment collection to any Google Form — auto-emails a payment link on submission, marks the row paid the moment the payment lands, and reconciles automatically. No screenshots. No manual matching.</p>
 
     <div class="proof">
       <div class="body">
         <span class="badge">Newest · Free &amp; open source</span>
-        <h3>Smart Scheduler</h3>
-        <p>List your available times per weekday in a Google Sheet (one row, comma-separated). Visitors pick a date and time on a clean booking page. Meet link auto-generated. Confirmation email sent. Booking auto-logged. Both sides receive a calendar invite.</p>
-        <p>This is the fourth tool in my free open-source suite for small service businesses: Smart Scheduler wins the meeting → Quote Generator wins the deal → Invoice Chaser gets you paid → Member Hub keeps them coming back.</p>
-        <a href="https://tinyurl.com/yy8d2yx3" class="btn" style="font-size:15px;padding:11px 20px">Read how I built it →</a>
-        <a href="https://github.com/dilipk15/smart-scheduler" class="btn btn-secondary" style="font-size:15px;padding:11px 20px">GitHub repo →</a>
+        <h3>Google Forms → Razorpay Bridge</h3>
+        <p>A single Google Apps Script that reads registrations from any Google Form, sends each registrant a Razorpay payment link, and writes payment status back to your response sheet — automatically. 12 tracking columns, self-healing verification, multi-currency support.</p>
+        <p>Built for event organisers, university departments, and anyone in India already using Google Forms + Razorpay who wants to stop chasing payments by hand.</p>
+        <a href="https://tinyurl.com/yz2h9x5r" class="btn" style="font-size:15px;padding:11px 20px" target="_blank" rel="noopener">Read how I built it →</a>
       </div>
-      <div class="shot-video">
-        <iframe src="https://www.youtube.com/embed/nhLArXObFEg"
-                title="Smart Scheduler — demo"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-      </div>
+      <img src="images/razorpay-cover.png" alt="Google Forms + Razorpay bridge — free payment collection for event registrations" class="shot-img">
     </div>
 
     <!-- MORE BUILDS — newest/best project is featured above; everything else goes here as a small card. -->
@@ -197,37 +190,43 @@
     <h3 style="margin-top:44px;margin-bottom:18px;font-size:20px">More things I've built</h3>
     <div class="projects-grid">
 
-      <a class="project-card" href="https://dilipkashyap15.medium.com/i-built-a-free-membership-qr-check-in-system-that-replaces-mindbody-glofox-clubready-open-c874ed1d9661">
+      <a class="project-card" target="_blank" rel="noopener" href="https://tinyurl.com/yy8d2yx3">
+        <img src="https://img.youtube.com/vi/nhLArXObFEg/maxresdefault.jpg" alt="Smart Scheduler — free Calendly alternative in Google Sheets">
+        <h3>Smart Scheduler</h3>
+        <p>Free Calendly alternative in a Google Sheet. Booking page, auto Google Meet links, HTML confirmation emails, anti-double-book protection.</p>
+      </a>
+
+      <a class="project-card" target="_blank" rel="noopener" href="https://dilipkashyap15.medium.com/i-built-a-free-membership-qr-check-in-system-that-replaces-mindbody-glofox-clubready-open-c874ed1d9661">
         <img src="images/membership%20cover%20image.png" alt="Smart Member Hub — free Mindbody, Glofox &amp; ClubReady alternative">
         <h3>Smart Member Hub</h3>
         <p>Membership database + QR check-in for gyms, studios, pools. Free Mindbody / Glofox / ClubReady alternative.</p>
       </a>
 
-      <a class="project-card" href="https://levelup.gitconnected.com/i-built-2-free-automation-tools-for-small-businesses-quote-generator-invoice-chaser-open-33447f834622">
+      <a class="project-card" target="_blank" rel="noopener" href="https://levelup.gitconnected.com/i-built-2-free-automation-tools-for-small-businesses-quote-generator-invoice-chaser-open-33447f834622">
         <img src="images/quote%20generator.webp" alt="Smart Quote Generator — free PDF quote automation">
         <h3>Smart Quote Generator</h3>
         <p>Google Form → branded PDF quote → emailed in 4 seconds. Free replacement for PandaDoc and QuoteWerks.</p>
       </a>
 
-      <a class="project-card" href="https://levelup.gitconnected.com/i-built-2-free-automation-tools-for-small-businesses-quote-generator-invoice-chaser-open-33447f834622">
+      <a class="project-card" target="_blank" rel="noopener" href="https://levelup.gitconnected.com/i-built-2-free-automation-tools-for-small-businesses-quote-generator-invoice-chaser-open-33447f834622">
         <img src="https://img.youtube.com/vi/4X-WLIrhSyM/maxresdefault.jpg" alt="Invoice Chaser — auto-escalating reminder emails for overdue invoices">
         <h3>Invoice Chaser</h3>
         <p>Log invoices in a Google Sheet → auto-escalating polite-to-firm reminders. Stops the moment you mark it paid.</p>
       </a>
 
-      <a class="project-card" href="https://medium.com/codetodeploy/how-i-automated-client-outreach-for-finance-accounting-businesses-without-expensive-crms-692cdee3e269">
+      <a class="project-card" target="_blank" rel="noopener" href="https://medium.com/codetodeploy/how-i-automated-client-outreach-for-finance-accounting-businesses-without-expensive-crms-692cdee3e269">
         <img src="images/finance_sme.webp" alt="Client outreach automation for finance &amp; accounting firms">
         <h3>Client Outreach Automation</h3>
         <p>Cold-email outreach for finance &amp; accounting firms, built on Google Workspace — no expensive CRM.</p>
       </a>
 
-      <a class="project-card" href="https://levelup.gitconnected.com/i-built-an-ai-email-engine-in-google-sheets-it-doubled-our-reply-rate-a60e0cb887b2">
+      <a class="project-card" target="_blank" rel="noopener" href="https://levelup.gitconnected.com/i-built-an-ai-email-engine-in-google-sheets-it-doubled-our-reply-rate-a60e0cb887b2">
         <img src="images/ai_email.webp" alt="AI email engine inside a Google Sheet">
         <h3>AI Email Engine</h3>
         <p>AI-powered cold-email engine inside a Google Sheet that doubled our reply rate.</p>
       </a>
 
-      <a class="project-card" href="https://levelup.gitconnected.com/how-i-cut-a-4-hour-procurement-process-to-3-minutes-using-google-apps-script-07777d906dd1">
+      <a class="project-card" target="_blank" rel="noopener" href="https://levelup.gitconnected.com/how-i-cut-a-4-hour-procurement-process-to-3-minutes-using-google-apps-script-07777d906dd1">
         <img src="images/procurment.png" alt="Procurement automation in Google Apps Script">
         <h3>Procurement Automation</h3>
         <p>Cut a 4-hour procurement process to 3 minutes with one Google Apps Script.</p>
