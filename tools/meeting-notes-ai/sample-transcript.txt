@@ -1,0 +1,115 @@
+Client kickoff - Acme Retail
+2026-09-15 · 14:30 - 14:52 IST
+
+Transcript
+
+Dilip Kashyap · 00:00:04
+Alright, we are recording and the transcript is on. Priya, thanks for making time on short notice. Can you walk me through what you're trying to solve, in your own words?
+
+Priya Sharma · 00:00:18
+Sure. So the main problem is that our store managers are still using WhatsApp to send in their daily stock counts. Every morning I get about forty photos of handwritten sheets and someone on my team, usually Rahul, spends the first two hours of every day typing those into our master spreadsheet. It is a mess and we lose visibility for half the day.
+
+Dilip Kashyap · 00:00:45
+Forty stores?
+
+Priya Sharma · 00:00:47
+Forty two right now. We are opening five more in Q1.
+
+Dilip Kashyap · 00:00:52
+Got it. And when Rahul finishes typing, what happens with that data?
+
+Rahul Menon · 00:00:59
+It goes into a shared Google Sheet. Then I run some pivot tables to see which SKUs are running low across stores. Then I email the procurement team with a reorder list. Usually by lunch.
+
+Dilip Kashyap · 00:01:14
+So the entire replenishment cycle is bottlenecked on you typing photos into a sheet for two hours.
+
+Rahul Menon · 00:01:21
+Basically yes.
+
+Priya Sharma · 00:01:23
+And on the days Rahul is sick or on leave, nothing moves. Which is not okay. We have had two incidents in the last quarter where a store ran out of the top-selling item for a full day because the reorder never went out.
+
+Dilip Kashyap · 00:01:41
+Okay. So the outcome you want is faster and more resilient. What would ideal look like from your side?
+
+Priya Sharma · 00:01:52
+Ideal is store managers enter their counts directly into something on their phone, it lands in a sheet automatically, low-stock alerts fire without anyone triaging them, and the reorder email drafts itself. Rahul should be spending his time on the analysis part, not the typing part.
+
+Dilip Kashyap · 00:02:15
+That is very doable. A Google Form on each store manager's phone, structured by SKU, submits to a single response sheet. An Apps Script scores each row against your reorder thresholds and either emails procurement directly or drafts an email for Rahul to approve. Which do you prefer, auto-send or human-in-the-loop?
+
+Priya Sharma · 00:02:41
+Human in the loop for now. I want Rahul to review it for at least the first month. If it looks right consistently, we can flip the switch to auto.
+
+Rahul Menon · 00:02:53
+That works for me. I would rather approve than clean up an auto-send that got a threshold wrong.
+
+Dilip Kashyap · 00:03:02
+Reasonable. Two questions on your data. First, do all forty two stores stock the same SKUs, or does it vary by store?
+
+Priya Sharma · 00:03:14
+It varies. Metro stores carry about eight hundred SKUs, tier-two towns carry around four hundred, and we have some region-specific items in the south.
+
+Dilip Kashyap · 00:03:26
+So the form needs to be per-store, showing only that store's SKU list. That is doable but adds a layer. Second question, where do the reorder thresholds come from?
+
+Rahul Menon · 00:03:38
+Currently they live in my head. I know that if the biscuit brand goes below thirty units at a metro store, we reorder. But it is not written down anywhere.
+
+Priya Sharma · 00:03:50
+Which is another thing we need to fix. If Rahul leaves tomorrow, that knowledge walks out the door.
+
+Dilip Kashyap · 00:03:58
+Agreed. So step one is getting those thresholds into a Thresholds sheet per store per SKU. That is going to be the most manual part of setup. Once it is there, the rest of the pipeline is mechanical.
+
+Priya Sharma · 00:04:14
+How long do you think for a first version?
+
+Dilip Kashyap · 00:04:19
+For a first version I could ship in two weeks. That would be a working form per store, submissions landing in a central sheet, a nightly threshold check, and reorder emails drafting themselves for Rahul to send. What it would not have on day one is nice dashboards or fancy analytics. Just the plumbing.
+
+Priya Sharma · 00:04:41
+That is fine. Plumbing is what we need. We can add dashboards later.
+
+Dilip Kashyap · 00:04:47
+Great. Rahul, can you get me a sample of the current WhatsApp photos and the master sheet by end of this week? And Priya, I will need a signoff on the reorder threshold approach before I start building.
+
+Rahul Menon · 00:04:59
+I can get you both by Wednesday.
+
+Priya Sharma · 00:05:03
+Signoff by Friday. If I have questions I will loop legal in but I do not expect any.
+
+Dilip Kashyap · 00:05:12
+One thing I want to raise now rather than later. This system will replace something Rahul currently owns. Are we agreed that Rahul is fine with that, and this is not a political issue?
+
+Rahul Menon · 00:05:26
+It is fine. Honestly I am tired of the typing. If this works I can finally do the analysis I keep talking about doing.
+
+Priya Sharma · 00:05:34
+Rahul is my second-in-command. This is a promotion in disguise. He has been asking for the analysis role for a year.
+
+Dilip Kashyap · 00:05:42
+Perfect. Then let us plan for me to start Monday. I will send a scope document over the weekend with what is in and out of v1, plus a pricing note. Any concerns before we wrap?
+
+Priya Sharma · 00:05:56
+One question. What happens if a store manager fills the form wrong, like enters two thousand instead of two hundred?
+
+Dilip Kashyap · 00:06:05
+Two answers. First, form-level validation catches obvious things like negative numbers or values over a per-SKU maximum you set in the Thresholds sheet. Second, the Apps Script can flag any row that swings more than a certain percent from that store's rolling average and hold it for review before triggering a reorder. Neither is bulletproof but together they catch about ninety percent of typos.
+
+Priya Sharma · 00:06:34
+Good enough. Anything else Rahul?
+
+Rahul Menon · 00:06:38
+Not from me.
+
+Dilip Kashyap · 00:06:41
+Then we are done. I will have the scope doc to you Sunday evening. Talk Monday.
+
+Priya Sharma · 00:06:47
+Thanks Dilip.
+
+Rahul Menon · 00:06:49
+Thanks.
